@@ -1,0 +1,7 @@
+Document fictif de démonstration — Guide du projet Orion
+
+Le projet Orion utilise PostgreSQL pour stocker les données métier. Les migrations de schéma sont versionnées et relues avant intégration.
+
+Les sauvegardes de la base PostgreSQL sont effectuées chaque jour à 02h00 UTC. Leur durée de conservation est de 30 jours. Une restauration de test est réalisée chaque mois par l'équipe plateforme.
+
+Le déploiement du projet Orion se déroule le mardi à 10h00 UTC. Le responsable du déploiement vérifie les tests automatisés et le point de santé de l'API. En cas d'échec du point de santé, la version précédente est restaurée.

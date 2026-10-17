@@ -1,0 +1,45 @@
+{
+  "mode": "demo lexical hashing, no LLM",
+  "threshold": 0.2,
+  "cases": 6,
+  "passed": 5,
+  "results": [
+    {
+      "question": "Quelle est la conservation des sauvegardes PostgreSQL ?",
+      "expected": "guide-projet.txt",
+      "top1": "guide-projet.txt",
+      "passed": true
+    },
+    {
+      "question": "Quand le déploiement du projet Orion est-il prévu ?",
+      "expected": "guide-projet.txt",
+      "top1": "guide-projet.txt",
+      "passed": true
+    },
+    {
+      "question": "Pourquoi un PDF scanné nécessite-t-il un OCR ?",
+      "expected": "formation-rag.md",
+      "top1": null,
+      "passed": false
+    },
+    {
+      "question": "Comment évaluer la pertinence des passages et la fidélité des réponses ?",
+      "expected": "formation-rag.md",
+      "top1": "formation-rag.md",
+      "passed": true
+    },
+    {
+      "question": "Quel est le salaire du directeur ?",
+      "expected": null,
+      "top1": null,
+      "passed": true
+    },
+    {
+      "question": "astronomie galaxies telescopes",
+      "expected": null,
+      "top1": null,
+      "passed": true
+    }
+  ],
+  "limitation": "Six hand-written cases on two synthetic documents. This is a smoke check, not a measure of general retrieval or answer faithfulness."
+}
